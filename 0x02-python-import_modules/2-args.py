@@ -1,14 +1,16 @@
 #!/usr/bin/python3
+def arguments(args):
+    if len(args) <= 1:
+            print("0 arguments.")
+    else:
+        if (len(args)) == 2:
+                print(len(args) - 1, "argument:")
+        else:
+            print(len(args) - 1, "arguments:")
+
+        for i, a in enumerate(args[1:], start=1):
+            print("{}: {}".format(i, a))
+
 if __name__ == "__main__":
     import sys
-    cmt = (len(sys.argv)-1)
-    if cmt == 0:
-        nt = "arguments."
-        print(f"{cmt} {nt}")
-    elif cmt == 1:
-        nt = "argument:"
-        print(f"{cmt} {nt}\n{cmt}: {str(sys.argv[1:])}")
-    else:
-        nt = "arguments:"
-        for i in cmt:
-            print("{cmt} {nt}\n{cmt[i]}: {str(sys.argv[i])}")
+    arguments(sys.argv)
