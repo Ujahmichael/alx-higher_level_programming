@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-"""THIS IS MY PYTHON CODE"""
-
 
 """Define a class Square."""
 
